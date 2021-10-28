@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "dbe6750a-5b57-45d4-8feb-bf0ae0c7ef20",
+		"name": "ShopaaBootAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "StoreAPI",
+			"item": [
+				{
+					"name": "getStores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/stores?size=5&page=0",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"stores"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createStore",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Toko 256 Pagi\",\n    \"address\": \"Cimahi\",\n    \"phone\": \"0855454565567\",\n    \"siup\": \"SIUP-682752678921897\",\n    \"npwp\": \"1999087965467\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/store",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteStore",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/store?id=8a8ab2a07c087bbc017c088428da0003",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"store"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8a8ab2a07c087bbc017c088428da0003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStore",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"id\": \"8a8ab2a07c087bbc017c0884753a0004\",\n            \"name\": \"Toko Kaya Raya\",\n            \"address\": \"Bogor\",\n            \"phone\": \"0855454565567\",\n            \"siup\": \"SIUP-682752678921897\",\n            \"npwp\": \"1999087965467\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/store",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStoreById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/store/8a8ab2a07c087bbc017c0884753a0004",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"store",
+								"8a8ab2a07c087bbc017c0884753a0004"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductAPI",
+			"item": [
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/products?size=9&page=0",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "9"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/product/8a8ab2a07c087bbc017c088551310006",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"8a8ab2a07c087bbc017c088551310006"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Lemari Baju\",\n    \"description\": \"Untuk menyimpan naju\",\n    \"price\": 2500000,\n    \"stock\": 19,\n    \"store_id\": \"8a8ab2a07c087bbc017c0883ec370002\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/product",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/product?id=8a8ab2a07c0b8274017c0b8c81940001",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8a8ab2a07c0b8274017c0b8c81940001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProducts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"Meja Belajar\",\n        \"description\": \"Meja untuk belajar\",\n        \"price\": 250000,\n        \"stock\": 20,\n        \"storeId\": \"8a8ab2a07c087bbc017c0883ec370002\"\n    },\n    {\n        \"name\": \"Spring Bed\",\n        \"description\": \"Untuk tidur\",\n        \"price\": 1500000,\n        \"stock\": 17,\n        \"storeId\": \"8a8ab2a07c087bbc017c0883ec370002\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"8a8ab2a07c087bbc017c088798fa000a\",\n    \"name\": \"Lemari Baju\",\n    \"description\": \"Untuk menyimpan baju\",\n    \"price\": 2500000,\n    \"stock\": 19,\n    \"storeId\": \"8a8ab2a07c087bbc017c0883ec370002\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/product",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchProductByNameContainingAndPriceBetween",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/product/search?min=1000000&size=9&page=0",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"search"
+							],
+							"query": [
+								{
+									"key": "min",
+									"value": "1000000"
+								},
+								{
+									"key": "size",
+									"value": "9"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "coba",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/coba?name=Ealah ngene ta required false",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"coba"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Ealah ngene ta required false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductByCriteria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/products/criteria?page=0&size=10&name=u&minPrice=1000000",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"products",
+								"criteria"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": "u"
+								},
+								{
+									"key": "minPrice",
+									"value": "1000000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerAPI",
+			"item": [
+				{
+					"name": "createCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"completeName\": \"Dewi Hajar\",\n    \"username\": \"sulthon\",\n    \"birthDate\": \"2000-09-04\",\n    \"phone\": \"08563554678\",\n    \"email\": \"dewihajar@gmail.com\",\n    \"gender\": \"F\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/customer/8a8ab2a07c0df99a017c0df9b9dd0000",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customer",
+								"8a8ab2a07c0df99a017c0df9b9dd0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"8a8ab2a07c0df420017c0df78e6f0000\",\n    \"completeName\": \"Auliya Rini\",\n    \"username\": \"auliyarini\",\n    \"birthDate\": \"1993-09-04\",\n    \"phone\": \"08563554678\",\n    \"email\": \"auliyarini@gmail.com\",\n    \"gender\": \"F\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerByCriteria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/customer?page=0&size=5&birthDate=2000-09-04",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customer"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "birthDate",
+									"value": "2000-09-04"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
